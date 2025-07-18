@@ -1,0 +1,11 @@
+dist
+node_modules
+/storybook
+.vscode
+*.log
+*.zip
+*.tgz
+*.tar.gz
+*.ignore
+
+*storybook.log

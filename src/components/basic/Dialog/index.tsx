@@ -1,0 +1,78 @@
+/********************************************************************************
+ * Copyright (c) 2023 BMW Group AG
+ * Copyright (c) 2023 Contributors to the Eclipse Foundation
+ *
+ * See the NOTICE file(s) distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Apache License, Version 2.0 which is available at
+ * https://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ ********************************************************************************/
+
+import { useTheme, useMediaQuery, type Theme } from '@mui/material'
+import MuiDialog, {
+  type DialogProps as MuiDialogProps,
+} from '@mui/material/Dialog'
+import { type SystemStyleObject } from '@mui/system'
+
+export const CONTENT_SPACING_RIGHT_LEFT = 10
+const MODAL_DEFAULT_WIDTH = '1000px'
+
+interface AddtionalDialogProps {
+  modalBorderRadius?: number
+  additionalModalRootStyles?: SystemStyleObject<Theme>
+}
+
+export type DialogProps = Pick<
+  MuiDialogProps,
+  'children' | 'open' | 'scroll' | 'sx' | 'fullWidth' | 'maxWidth'
+>
+
+export const Dialog = ({
+  scroll = 'body',
+  modalBorderRadius,
+  additionalModalRootStyles = {},
+  fullWidth,
+  maxWidth,
+  ...props
+}: DialogProps & AddtionalDialogProps) => {
+  const theme = useTheme()
+  const notWeb = useMediaQuery('(max-width:1023px)')
+
+  const radius =
+    modalBorderRadius && modalBorderRadius !== 0 ? modalBorderRadius : 20
+
+  const fullScreenWidth = `calc(100vw - ${theme.spacing(8)})`
+  const defaultWidth =
+    (maxWidth !== false && maxWidth !== undefined) || notWeb
+      ? 'auto'
+      : MODAL_DEFAULT_WIDTH
+  const width = fullWidth ? fullScreenWidth : defaultWidth
+
+  return (
+    <MuiDialog
+      className={'cx-dialog'}
+      {...props}
+      scroll={scroll}
+      maxWidth={fullWidth ? 'xl' : maxWidth}
+      sx={{
+        '.MuiPaper-root': {
+          borderRadius: `${radius}px !important`,
+          width,
+          maxWidth: maxWidth ? undefined : fullScreenWidth,
+          overflowWrap: 'break-word',
+          ...additionalModalRootStyles,
+        },
+      }}
+    />
+  )
+}

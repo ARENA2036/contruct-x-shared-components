@@ -1,0 +1,52 @@
+<svg width="4400" height="1801" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <g id="background" transform="scale(0.8 1) translate(-160 -1470)">
+        <path d="M443 1544C443 1532 452 1523 464 1523L1257 1523C1269 1523 1279 1532 1279 1544L1279 1628C1279 1640 1269 1650 1257 1650L464 1650C452 1650 443 1640 443 1628Z" fill="#85ACB9"/>
+    </g>
+    </defs>
+  <style>
+    .desc {
+      fill: #ffffff;
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+    }
+  </style>
+    <g transform="translate(0 -412)">
+  <path d="M0 460C0 434 21 413 47 413L4352 413C4378 413 4400 434 4400 460L4400 2162C4400 2188 4378 2210 4352 2210L47 2210C21 2210 0 2188 0 2162Z" fill="#035970" />
+  </g>
+  <rect x="100" y="100" width="4204" height="1600" stroke="#FFFFFF" stroke-width="6" fill="none" />
+    <rect x="260" y="50" width="835" height="107" stroke="#FFFFFF" stroke-width="6" fill="#035970" />
+    <text fill="#FFFFFF" font-family="Arial Narrow,sans-serif" font-weight="700" font-size="55" transform="translate(423 120)">Lebenszyklus “as built”</text>
+    <g id="icon">
+        <path d="M15 80C15 80 14 81 13 80 12 80 12 79 12 78 12 77 12 76 13 76 14 76 15 76 15 77 16 77 16 79 15 80ZM84 16 76 24 70 22 68 16 76 8C71 6 66 7 63 11 59 14 57 19 59 24L9 73C8 75 7 78 7 80 8 82 10 84 12 85 15 85 17 85 19 83L68 33C73 35 78 33 81 30 85 26 86 21 84 16Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 50)" />
+        <path d="M83 73 58 48 48 58 73 83 74 84 74 83C76 86 80 85 83 83 85 80 85 76 83 73Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 50)" />
+        <path d="M21 19 21 19 19 14 11 7 7 11 14 19 19 21 19 21 37 40 40 37Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 50)" />
+    </g>
+    <text class="desc" x="280" y="270">Beschreibt den Zustand eines Bauteils bzw. Fahrzeugs nach Verbau im jeweiligen Werk. Jedes Einzelteil oder jede Charge wird dabei als Digitaler Zwilling abgebildet.</text>
+    <use x="200" y="300" href="#background"></use>
+    <use x="200" y="500" href="#background"></use>
+    <use x="200" y="700" href="#background"></use>
+    <use x="200" y="900" href="#background"></use>
+    <use x="200" y="1150" href="#background"></use>
+    <use x="200" y="1350" href="#background"></use>
+    <text class="desc" x="630" y="430">SerialPart</text>
+    <text class="desc" x="680" y="630">Batch</text>
+    <text class="desc" x="540" y="830">JustInSequencePart</text>
+    <text class="desc" x="540" y="1030">BatteryTractionCode</text>
+    <text class="desc" x="500" y="1280">SingleLevelBomAsBuilt</text>
+    <text class="desc" x="500" y="1480">SingleLevelUsageAsBuilt</text>
+    <text class="desc" x="1200" y="410">Bildet Stammdaten eines Bauteils mit eigener Seriennummer nach Verbau ab.</text>
+    <text class="desc" x="1200" y="480">Relevant für Hersteller von serialisierten Einzelteilen oder Fahrzeughersteller.</text>
+    <text class="desc" x="1200" y="610">Bildet Stammdaten einer Charge nach Verbau ab. Relevant für Hersteller von Bauteilen mit großen Losgrößen, die zu gleichen</text>
+    <text class="desc" x="1200" y="680">Herstellungsbedingungen produziert und in einer Chargennummer gebündelt werden.</text>
+    <text class="desc" x="1200" y="810">Bildet Stammdaten eines „Just-In-Sequence“-Teils (JIS) nach Verbau ab. JIS-Komponenten haben keine herkömmliche Seriennummer,</text>
+    <text class="desc" x="1200" y="870">sondern eine Abrufnummer bzw. JIS-Nummer.</text>
+    <text class="desc" x="1200" y="1010">Wird verwendet, um die Identifikationscodes (GBT-Codes) bereitzustellen, die beim Export von Hochvoltspeichern für Kraftfahrzeuge in</text>
+    <text class="desc" x="1200" y="1070">die Volksrepublik China angegeben werden müssen. Diese Codes werden auf der Ebene der Zelle, des Moduls und des</text>
+    <text class="desc" x="1200" y="1140">Speichers selbst benötigt.</text>
+    <text class="desc" x="1200" y="1240">Bildet die Verbaubeziehungen zwischen den Bauteilen Top-Down ab. </text>
+    <text class="desc" x="1200" y="1300">Beispielsweise in welchem Fahrzeug welches Serialisierte Teil (Getriebe) oder welche Charge (Lack) verbaut ist.</text>
+    <text class="desc" x="1200" y="1440">Bildet die Verbaubeziehungen zwischen den Bauteilen Bottom-up ab.</text>
+    <text class="desc" x="1200" y="1510">Beispielsweise welche Charge (Zahnrad, Rohstoff) in welchem Serialisierten Teil (Getriebe) verbaut ist.</text>
+</svg>
