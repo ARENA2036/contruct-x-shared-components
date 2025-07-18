@@ -41,7 +41,7 @@
     "@mui/icons-material": "^7.0.0",
     "@mui/material": "^7.2.0",
     "@mui/system": "^7.0.0",
-    "@mui/x-data-grid": "^7.27.2",
+    "@mui/x-data-grid": "^7.29.8",
     "@mui/x-date-pickers": "^7.27.1",
     "amount-to-words": "^6.0.3",
     "autosuggest-highlight": "^3.3.4",
@@ -52,7 +52,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.1.0",
-    "react-player": "^2.15.1",
+    "react-player": "^2.16.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"
   },
